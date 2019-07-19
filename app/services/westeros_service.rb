@@ -4,7 +4,7 @@ class WesterosService
     get_json("house/#{house}")
   end
 
-  # private
+  private
 
   def get_json(url, params = nil)
     response = conn.get(url, params)

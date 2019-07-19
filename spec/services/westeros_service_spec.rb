@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe WesterosService do
-  it "finds current house's members" do
+  it "finds a house" do
 
     house = "Greyjoy"
 

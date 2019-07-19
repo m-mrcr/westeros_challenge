@@ -11,7 +11,7 @@ feature 'search index' do
         visit root_path
 
         # And I select "Greyjoy" from the dropdown
-        find('#houseSelect').find(:xpath, 'Greyjoy').select_option
+        click_link "Greyjoy"
 
         # And I click on "Get Members"
         click_link "Get Members"
