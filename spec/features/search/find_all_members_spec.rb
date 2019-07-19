@@ -11,10 +11,10 @@ feature 'search index' do
         visit root_path
 
         # And I select "Greyjoy" from the dropdown
-        click_link "Greyjoy"
+        select "Greyjoy", from: "house"
 
         # And I click on "Get Members"
-        click_link "Get Members"
+        find('input[value="Get Memebers"]').click
 
         # Then my path should be "/search" with "house=greyjoy" in the parameters
         expect(current_path).to eq("/search?house=greyjoy")
@@ -30,8 +30,6 @@ feature 'search index' do
           expect(page).to have_content("Name: ")
           expect(page).to have_content("ID: ")
         end
-
-      # end
     end
   end
 end
