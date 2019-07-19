@@ -8,8 +8,8 @@ describe WesterosFacade do
     members = westeros_facade.house_members(house)
 
     expect(members.class).to eq(Array)
-    expect(members.first.class).to eq(Hash)
-    expect(members.first[:id].class).to eq(Integer)
-    expect(members.first[:name].class).to eq(String)
+    expect(members.first.class).to eq(HouseMember)
+    expect(members.first.id.class).to eq(Integer)
+    expect(members.first.name.class).to eq(String)
   end
 end
