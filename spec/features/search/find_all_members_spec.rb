@@ -17,7 +17,7 @@ feature 'search index' do
         find('input[value="Get Members"]').click
 
         # Then my path should be "/search" with "house=greyjoy" in the parameters
-        expect(current_path).to eq("/search")
+        expect(page).to have_current_path(search_index_path(house: 'greyjoy'))
 
         # And I should see a message "7 Members"
         expect(page).to have_content("7 Members")
