@@ -1,0 +1,10 @@
+<h1>Members of House <%= params[:house].capitalize %></h1>
+<h3><%= facade.house_members(params[:house]).count %> Members</h3>
+<ul>
+  <% facade.house_members(params[:house]).each do |member| %>
+    <section class="member">
+      <li>Member Name: <%= member.name %></li>
+      <li>Member ID: <%= member.id %></li>
+    </section>
+  <% end %>
+</ul>

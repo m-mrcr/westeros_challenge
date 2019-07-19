@@ -1,0 +1,11 @@
+<h2>Welcome to the Westeros Index</h2>
+
+<form action="/search">
+  <select name="house">
+    <% facade.houses.each do |house_names| %>
+      <option value=<%= house_names.last %>><%= house_names.first %></a>
+    <% end %>
+  </select>
+  <br><br>
+  <input type="submit" class="get" value="Get Members" />
+</form>
